@@ -13,7 +13,7 @@ cpu_ms = 300000
 
 
 [observability]
-enabled = false
+enabled = true
 head_sampling_rate = 1
 
 [observability.logs]
