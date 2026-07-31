@@ -1,4 +1,4 @@
-name = "usxray"
+name = "hkxray"
 main = "src/index.js"
 compatibility_date = "2026-07-24"
 workers_dev = false
@@ -43,7 +43,7 @@ region = "gcp:asia-east-1" #台湾
 
 
 [[containers]]
-class_name = "usxray"
+class_name = "hkxray"
 image = "./Dockerfile"
 # instance_type = "standard-2"
 # max_instances = 1
@@ -58,9 +58,9 @@ regions = ["APAC"]
 # jurisdiction = "fedramp"
 
 [[durable_objects.bindings]]
-name = "USXRAY"
-class_name = "usxray"
+name = "HKXRAY"
+class_name = "hkxray"
 
 [[migrations]]
 tag = "v1"
-new_sqlite_classes = [ "usxray" ]
+new_sqlite_classes = [ "hkxray" ]
