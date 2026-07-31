@@ -1,6 +1,6 @@
 import {Container} from '@cloudflare/containers';
 import {connect} from 'cloudflare:sockets';
-export class usxray extends Container {
+export class hkxray extends Container {
     defaultPort = 8080;
     sleepAfter = '1h';
 }
@@ -178,7 +178,7 @@ const handleWebSocketConn = (webSocket, tcpSocket, parsedRequest) => {
 };
 export default {
     async fetch(request, env) {
-        const container = env.USXRAY.getByName('default');
+        const container = env.HKXRAY.getByName('default');
         if (request.headers.get('Upgrade') !== 'websocket') return new Response(null, {status: 404});
         if (request.url.includes('proxyall')) return container.fetch(request);
         const earlyData = getEarlyData(request);
