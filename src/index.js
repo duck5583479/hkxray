@@ -178,7 +178,7 @@ const handleWebSocketConn = (webSocket, tcpSocket, parsedRequest) => {
 };
 export default {
     async fetch(request, env) {
-        const container = env.HKXRAY.getByName('default');
+        const container = env.USXRAY.getByName('default');
         if (request.headers.get('Upgrade') !== 'websocket') return new Response(null, {status: 404});
         if (request.url.includes('proxyall')) return container.fetch(request);
         const earlyData = getEarlyData(request);
